@@ -33,4 +33,4 @@ why sudo? because it's the magic word i guess, smh i hate using sudo
 ##### Is there a security issue?
 
 You are running a script you found on internet in sudo, so far it's two lines of code mostly regex.
-If for some reasons the website that i trust to redirect me has been compromised well that could be a possible "DNS hijacking", but i have no clue if it's a low or high severity security :x
+If for some reasons the website that i trust to redirect me has been compromised well that could be a possible "DNS hijacking", but i have no clue if it's a low or high severity security issue:x
