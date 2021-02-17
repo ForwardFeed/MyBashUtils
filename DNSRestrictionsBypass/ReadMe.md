@@ -14,6 +14,7 @@ So i made my own Domain Name Table in a way.
 
 first you need to format your /etc/hosts file
 add a ```#Hosts```  line and it's good, else it won't work
+
 then chmod u+x the script
 and run it this way
 
@@ -23,6 +24,7 @@ example: sudo ./dnsbypass github.com
 ```
 
 and then you can acces your previously redirected/blocked website
+
 why sudo? because it's the magic word i guess, smh i hate using sudo
 
 
