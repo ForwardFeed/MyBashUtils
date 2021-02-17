@@ -1,3 +1,9 @@
 #!/bin/bash
+if [ $# -eq 0 ]
+then
+	echo "Usage ./dnsbypass <the domain name> "
+	echo "example: ./dnsbypass github.com"
+	exit 1;
+fi
 ip=`curl "https://check-host.net/ip-info?host=$1" | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}</td>" | head -1 | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}"`
 sudo sed -i "/#Hosts/ a $ip\t\t$1" /etc/hosts	
