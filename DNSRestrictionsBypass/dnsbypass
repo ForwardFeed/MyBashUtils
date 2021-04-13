@@ -9,15 +9,14 @@ fi
 #sometimes you want to delete
 if [ $1  == "-remove" ]
 then
-	sed -i "/$2/d" /etc/hosts
-	echo "removed"
+	sed -i "/$2/d" /etc/hosts && echo "removed"
 	exit 0;
 fi
 
 #deletes if the line is already here (i could have made a check instead but who cares?
 sed -i "/$1/d" /etc/hosts
 
-ip=`curl "https://check-host.net/ip-info?host=$1" | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}</td>" | head -1 | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}"`
+ip=`curl "https://check-host.net/ip-info?host=$1" | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}</strong>" | head -1 | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}"`
 if [ $ip != "" ] #sometimes it gives nothing, i have no idea
 then
 	echo "IP for $1 is $ip"
