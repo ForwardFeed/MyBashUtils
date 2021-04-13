@@ -38,4 +38,4 @@ If for some reasons the website that i ((trust)) to redirect me has been comprom
 
 ##### I have "Error retrieving IP"
 
-S0rry, no clue.
+Most likely my script isn't up to date, websites are changing sometimes
