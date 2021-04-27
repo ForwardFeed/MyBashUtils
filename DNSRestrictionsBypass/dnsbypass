@@ -1,8 +1,11 @@
 #!/bin/bash
 if [ $# -eq 0 ]
 then
-	echo "Usage ./dnsbypass <the domain name> "
+	echo "Usage ./dnsbypass <the domain name>"
 	echo "example: ./dnsbypass github.com"
+	echo "to specify any dns use the second argument <8.8.8.8> (its the default by the way)"
+	echo "example : ./dnsbypass 4chan.org 1.1.1.1"
+	echo "if you want to delete one route use -remove <the domaine name>"
 	exit 1;
 fi
 
@@ -13,11 +16,18 @@ then
 	exit 0;
 fi
 
-#deletes if the line is already here (i could have made a check instead but who cares?
-sed -i "/$1/d" /etc/hosts
 
-ip=`curl "https://check-host.net/ip-info?host=$1" | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}</strong>" | head -1 | grep -o "[0-9]\{1,3\}\(\.[0-9]\{1,3\}\)\{3\}"`
-if [ $ip != "" ] #sometimes it gives nothing, i have no idea
+DNSproxy="8.8.8.8"
+if [[ ! -z $2 ]] 
+then
+	DNSproxy=$2
+fi
+
+
+sed -i "/$1/d" /etc/hosts #suposed to delete the line, to not have two route for a same domain name
+
+ip="$(dig @$DNSproxy +short $1)" #there i use a specific DNS, googles one by default, might change that later
+if [ $ip != "" ] #
 then
 	echo "IP for $1 is $ip"
 	sudo sed -i "/#Hosts/ a $ip\t\t$1" /etc/hosts
