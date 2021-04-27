@@ -40,5 +40,6 @@ why sudo? because afaik you can't write the /etc/hosts file without root acces.
 ##### Is there a security issue?
 
 You are running a script you found on the internet in sudo. it's a problem.
-But the script is quite simple, it's just a bit tricky.
+However the script is quite simple, it's just a bit tricky.
+And that's it afaik, a lot of people trust Google DNS and else you could use mozzila ones 1.1.1.1 and to be fair my friend, it's better to have mozzilla having your DNS requests than google but since i'm a troll i'm gonna let every people use googles ones by default.
 
