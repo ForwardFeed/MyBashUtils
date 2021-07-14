@@ -1,11 +1,11 @@
 ### What is this?
 
-Simply allows you to have acces to websites with a DNS blocking.
+Simply allows you to have acces to websites under a DNS blocking from your ISP.
 
 
 ### Why ?
 
-Because some retards in my governement seems to find it funny to block access to some websites by.
+Because some retards in my governement seems to find it funny to block access to some websites.
 So i edited myself my Domain Name Table in a way.
 
 
