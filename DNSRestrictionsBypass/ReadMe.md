@@ -43,3 +43,9 @@ You are running a script you found on the internet in sudo. it's a problem.
 However the script is quite simple, it's just a bit tricky.
 And that's it afaik, a lot of people trust Google DNS and else you could use mozzila ones 1.1.1.1 and to be fair my friend, it's better to have mozzilla having your DNS requests than google but since i'm a troll i'm gonna let every people use googles ones by default.
 
+##### Can it bypass an applicative firewall
+
+No but you can take the IP and put it in the web browser tab.
+It won't Work every time because of some multiple hosting and reverse proxy magic
+example:  Error 1003
+And i have no idea how to circumvent this without using a proxy or other solutions that might exist require a service on it's own.
