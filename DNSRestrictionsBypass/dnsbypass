@@ -24,7 +24,7 @@ then
 fi
 
 
-sed -i "/$1/d" /etc/hosts #suposed to delete the line, to not have two route for a same domain name
+sed -i "/$1/d" /etc/hosts #supposed to delete the line, to not have two route for a same domain name
 
 ip="$(dig @$DNSproxy +short $1)" #there i use a specific DNS, googles one by default, might change that later
 if [ $ip != "" ] #
