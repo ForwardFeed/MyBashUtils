@@ -1,4 +1,4 @@
-#I know killall -r exist but this version works better for some reason
+#I know killall -r don't use this lmao
 
 ```
 alias bye=" bye() { ps -aux | grep \$1 |  awk '{print \$2}' | xargs kill -9 ; unset -f bye ; }; bye"
