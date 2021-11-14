@@ -1,6 +1,7 @@
 #I know killall -r exist but this version works better for some reason
 
-```alias bye=" bye() { ps -aux | grep \$1 |  awk '{print \$2}' | xargs kill -9 ; unset -f bye ; }; bye"
+```
+alias bye=" bye() { ps -aux | grep \$1 |  awk '{print \$2}' | xargs kill -9 ; unset -f bye ; }; bye"
 ```
 
 #If you like to download music from youtube
