@@ -1,4 +1,4 @@
-#I know killall -r exist, don't use this lmao
+#killall -r "appname" but different
 
 ```
 alias bye=" bye() { ps -aux | grep \$1 |  awk '{print \$2}' | xargs kill -9 ; unset -f bye ; }; bye"
