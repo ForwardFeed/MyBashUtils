@@ -10,11 +10,6 @@ EOF
 
 
 ### FUNCTIONS
-getlocale(){
-
-
-
-}
 
 readkey(){
 [ -z $1 ] && echo "no keyboard found" && exit 
