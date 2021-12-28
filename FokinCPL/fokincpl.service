@@ -1,0 +1,9 @@
+[Unit]
+Description=My fokin CPL are bugged
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /media/notalinux/bashtest/FokinCPL/main.sh
+
+[Install]
+WantedBy=multi-user.target
