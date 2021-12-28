@@ -24,7 +24,7 @@ honestly this one is very interresting just technically where i managed to inter
 it will just find your keyboard automatically and print out the decimal keycode/keysyms. (i haven't totally understood how keyboards works in linux)
 
 ### SteamActivityStalk
-so i was looking to see if my boyfriend wasn't playing csgo instead of, i dunno, doing the things he told me he was doing, and since i'm kinda huh cringe? obsessive? i made a tool for spying on his steamaccount. Even if the person you stalk is in invisible in steam friends, you can guess when he plays with this.\
+so i was looking to see if my (ex)boyfriend wasn't playing csgo instead of, i dunno, doing the things he told me he was doing, and since i'm kinda huh cringe? obsessive? i made a tool for spying on his steamaccount. Even if the person you stalk is in invisible in steam friends, you can guess when he plays with this.\
 /!\ if the profile of the person is not in public anything will work.\
 so there is three settings:\
 APPID="" #This is the ID of the steam game you want to keep an eye on.\
@@ -41,3 +41,5 @@ if you see the thing going up, well your buddy is playing rn.<br />
 
 it's not very very clear and sometimes it's not smooth but you can understand quickly i'm sure.
 
+### FokinCPL
+I made a systemd service that restart my interfaces whenever my Power Line Communication start to i don't know bugging or something, anyway that's very specific to my case i guess, the code is absurdely stupid but seems to work so far lmao
