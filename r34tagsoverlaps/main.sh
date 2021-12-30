@@ -16,8 +16,11 @@ GetDifference(){
 [ -z $2 ] && echo "missing second tag" >&2 && exit
 
 T1=($(GetTagsHit $1))
+[ $? -eq 1 ] && exit
 T2=($(GetTagsHit $2))
+[ $? -eq 1 ] && exit
 Both=$(GetBothTagsHit $T1 $T2)
+[ $? -eq 1 ] && exit
 P1=$(Proportion ${T1[1]} $Both)
 P2=$(Proportion ${T2[1]} $Both)
 
@@ -46,24 +49,28 @@ fi
 echo $r
 }
 
+ErrorFetchTag(){
+	echo "there is no tag $1" >&2
+	exit 1
+}
 
 ListTags(){
-[ -z $1 ] && echo "error no input given" >&2 && exit
+[ -z $1 ] && echo "error no input given" >&2 && exit 1
 
 curl -s https://rule34.xxx/autocomplete.php?q=${1} | grep -Po '[a-zA-Z]+ \([0-9]+' | tr -d '('
 }
 
 GetTagsHit(){
 
-[ -z $1 ] && echo "error no input given" >&2 && exit
+[ -z $1 ] && echo "error no input given" >&2 && exit 1
 
 hits=($(curl -s https://rule34.xxx/autocomplete.php?q=${1} | grep -Po '[_a-zA-Z]+ \([0-9]+' | tr -d '('))
-echo ${hits[@]}
+[ -z $hits ] && ErrorFetchTag $1 || echo ${hits[@]}
 }
 
 GetBothTagsHit(){
-[ -z $1 ] && echo "missing first tag" >&2 && exit
-[ -z $2 ] && echo "missing second tag" >&2 && exit
+[ -z $1 ] && echo "missing first tag ?????" >&2
+[ -z $2 ] && echo "missing second tag??? what kind of bug is this" >&2
 result=$(curl -s "https://rule34.xxx/index.php?page=post&s=list&tags=${1}+${2}" | grep -Eo '[0-9]+" alt="last page' | grep -Eo "^[0-9]+")
 [ -z $result ] && GetBothTagsHitSafe $1 $2 || echo $result
 }
@@ -71,7 +78,7 @@ result=$(curl -s "https://rule34.xxx/index.php?page=post&s=list&tags=${1}+${2}" 
 #if there is only one page
 GetBothTagsHitSafe(){
 result=$(curl -s "https://rule34.xxx/index.php?page=post&s=list&tags=${1}+${2}" | grep -o 'class="preview' | wc -l)
-[ -z $result ] && echo "Something is wrong abort" >&2 && exit
+[ -z $result ] && echo "Something is wrong abort" >&2 && exit 1
 echo $result
 }
 ### RUN IT
