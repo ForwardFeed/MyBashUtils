@@ -33,7 +33,17 @@ echo "$1 is present in $P2% of $2"
 Proportion(){
 total=$1
 part=$2
-bc <<< "scale=2; $part/$total*100"
+local r=$(bc <<< "scale=4; $part/$total*100")
+if [[ $r =~ ^. ]]
+then
+	r="0$r"
+fi
+
+if [[ $r =~ 0$ ]]
+then
+	r=$(sed s'/0\+$//' <<< $r)
+fi
+echo $r
 }
 
 
