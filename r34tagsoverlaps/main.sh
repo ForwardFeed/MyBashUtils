@@ -34,7 +34,7 @@ Proportion(){
 total=$1
 part=$2
 local r=$(bc <<< "scale=4; $part/$total*100")
-if [[ $r =~ ^. ]]
+if [[ $r =~ ^\. ]]
 then
 	r="0$r"
 fi
