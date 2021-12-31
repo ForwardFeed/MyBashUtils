@@ -1,4 +1,4 @@
 #!/bin/bash
-ps aux | awk '/Discord$/ {print $2}'| xargs kill -9
+ps -ef | grep "$(readlink -f $(which discord))" | grep -v "grep" | awk '{print $2}' | xargs kill -9
 echo "free ram desu!"
 
