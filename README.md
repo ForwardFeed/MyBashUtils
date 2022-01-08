@@ -43,8 +43,3 @@ it's not very very clear and sometimes it's not smooth but you can understand qu
 
 ### FokinCPL
 I made a systemd service that restart my interfaces whenever my Power Line Communication start to i don't know bugging or something, anyway that's very specific to my case i guess, the code is absurdely stupid but seems to work so far lmao
-
-
-### r34tagsoverlaps
-Some tags on this porn website are cancer, i just wanted a tool to realize how much some tags are related to another one
-You put two tags in both arguments and it compare
