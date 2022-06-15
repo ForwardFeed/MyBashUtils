@@ -24,7 +24,7 @@ honestly this one is very interresting just technically where i managed to inter
 it will just find your keyboard automatically and print out the decimal keycode/keysyms. (i haven't totally understood how keyboards works in linux)
 
 ### SteamActivityStalk
-so i was looking to see if my (ex)boyfriend wasn't playing csgo instead of, i dunno, doing the things he told me he was doing, and since i'm kinda huh cringe? obsessive? i made a tool for spying on his steamaccount. Even if the person you stalk is in invisible in steam friends, you can guess when he plays with this.\
+I made a tool for spying a steam account. Even if the person you stalk is in invisible in steam friends, you can guess when he plays with this.\
 /!\ if the profile of the person is not in public anything will work.\
 so there is three settings:\
 APPID="" #This is the ID of the steam game you want to keep an eye on.\
