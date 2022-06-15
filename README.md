@@ -3,15 +3,23 @@ Here will be posted some linux utilities i made.
 Mostly scripts i think
 
 ### DNSRestrictionBypass
-
+It's a script that helps bypassing the DNS restriction that i had.
 
 ### Killcord
-Simply kills your discord app, not just close it and having it running in backgrounds, it just terminates it
+Simply kills your discord app, not just close it and having it running in backgrounds, it just terminates it.
+Usefull because it use a considerable amount of RAM
 
 ### MultiThreader
-I like to multithread stuff in bash so i made a function to import for that instead of doing it manually each time.\
-This function takes an Array as first parameters (just a string with spaces) and for the second parameters it will need the number of subprocess you wish to run simultaneously.
 something like xargs but with multithreads on.
+I like to multithread long executions in bash so i made a function to import for that instead of doing it manually each time.\
+This function will take:
+  1) an array of arguments
+  2) a numbers of threads
+  3) a name of function to execute the splitted arguments on
+  4) a boolean:\
+      True) Each thread will send tons of subprocess without waiting for the previous to exit to launch the next\
+      False/unspecified) Will have to wait the last function has been fully executed before launching the next\
+
 
 ### PotentialbashMONKEYlogger
 I wanted to make a keybinder with bash but i somewhat made a keylogger.\
