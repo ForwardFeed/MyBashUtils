@@ -28,11 +28,11 @@ sed -i "/$1/d" /etc/hosts #supposed to delete the line, to not have two route fo
 
 ip=($(dig @$DNSproxy +short $1)) #there i use a specific DNS, googles one by default, might change that later
 echo $ip
-exit
+
 if [ $ip != "" ] #
 then
 	echo "IP for $1 is $ip"
-	sudo sed -i "/#Hosts/ a $ip\t\t$1" /etc/hosts
+	echo -e "$ip\t$1" >> /etc/hosts
 else
 	echo "Error retrieving IP"
 fi	
