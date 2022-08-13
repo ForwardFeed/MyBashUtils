@@ -44,8 +44,11 @@ If you see the past_two_weeks staying still that mean the user is currently play
 If you see the past_two_weeks going up that mean the user is currently playing<br />
 
 ### FokinCPL
-My Power Line Communicators are a bit buggy for some unknown reason and randomly cut my internet.\
-So i found a solution: restarting my internet interface with a systemd service.\
+My Power Line Communicators are a bit buggy for some unknown reason(s) and randomly cut my internet.\
+So i found a solution: restarting my internet interface with a systemd service when no contact with my router has been established.\
+there is a systemd service alongside it because it's better when it's automatic
+to use it pay attention to fill the path of the script (here main.sh, you can rename it no problem)
+and inside the script fill in the variable please description are inside the script
 
 ### ClickDl (for Freetube)
 I like to download music from youtube and i was lazy to click copy link each time.\

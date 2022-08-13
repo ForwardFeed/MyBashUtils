@@ -3,7 +3,7 @@ Description=My fokin CPL are bugged
 
 [Service]
 Type=simple
-ExecStart=/bin/bash /media/notalinux/bashtest/FokinCPL/main.sh
+ExecStart=/bin/bash "PATH OF THE SCRIPT"
 
 [Install]
 WantedBy=multi-user.target
