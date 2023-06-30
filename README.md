@@ -44,6 +44,7 @@ If you see the past_two_weeks staying still that mean the user is currently play
 If you see the past_two_weeks going up that mean the user is currently playing<br />
 
 ### FokinCPL
+2023 notes: this is a problem with my ethernet card not with my ethernet port x)
 My Power Line Communicators are a bit buggy for some unknown reason(s) and randomly cut my internet.\
 So i found a solution: restarting my internet interface with a systemd service when no contact with my router has been established.\
 there is a systemd service alongside it because it's better when it's automatic
